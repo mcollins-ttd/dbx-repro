@@ -1,8 +1,6 @@
 from databricks.connect import DatabricksSession
 
-
-def callRestAPIBatch(df, batchId):
-    print("ok")
+from dbx_repro.main import callRestAPIBatch
 
 
 def test_foreachbatch():
