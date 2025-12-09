@@ -5,6 +5,7 @@ from dbx_repro.main import callRestAPIBatch
 
 def test_foreachbatch():
     spark = DatabricksSession.builder.getOrCreate()
+    spark.addArtifact("./src", pyfile=True)
 
     dfSource = (spark.readStream
                 .format("delta")
